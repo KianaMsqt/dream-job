@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
+import JobSearch from './components/job_search/JobSearch';
+import Header from './components/navlink/Header';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          {/* Define routes using the Route component to render different page components at different paths */}
+          {/* Define a default route that will render the Home component */}
+          <Route path="/" element={<JobSearch />} />
+          <Route path="contact/*" element={<Contact />} />
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
   );
 }
 
