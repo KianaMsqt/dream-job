@@ -1,12 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import JobSearch from "./components/job_search/JobSearch";
+import SearchFields from "./components/job_search/SearchFields";
 import Header from "./components/navlink/Header";
+import JobSearch from "./components/job_search/JobSearch";
 
 function App() {
   return (
@@ -19,6 +19,8 @@ function App() {
           <Route path="/" element={<JobSearch />} />
           <Route path="contact/*" element={<Contact />} />
         </Routes>
+
+        <SearchFields />
         <Footer />
       </div>
     </Router>
