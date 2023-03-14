@@ -15,6 +15,7 @@ export default function searchFields() {
     >
       <TextField id="outlined-basic" label="Job Title" variant="outlined" />
       <TextField id="outlined-basic" label="Location" variant="outlined" />
+      <TextField id="outlined-basic" label="minimum salary" variant="outlined" />
       <Button variant="contained">Search Jobs</Button>
     </Box>
   );
