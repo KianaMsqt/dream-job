@@ -1,4 +1,3 @@
-import { CenterFocusStrong } from "@mui/icons-material";
 import { TextField, Button, Box } from "@mui/material";
 
 function Contact() {
