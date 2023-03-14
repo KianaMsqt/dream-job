@@ -1,11 +1,9 @@
 name: Push and Deploy
-
 # When workflow is triggered
 on:
   push:
     branches:
       - main
-
 # Jobs to carry out
 jobs:
   deploy:
