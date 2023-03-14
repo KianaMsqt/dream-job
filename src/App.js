@@ -1,14 +1,15 @@
-import './App.css';
+import "./App.css";
+import React from "react";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
-import JobSearch from './components/job_search/JobSearch';
-import Header from './components/navlink/Header';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
+import SearchFields from "./components/job_search/SearchFields";
+import Header from "./components/navlink/Header";
+import JobSearch from "./components/job_search/JobSearch";
 
 import { fakeApiReturnData, makeFakeApiRequest } from './utils/fakeApi';
 //import axios from 'axios';
-
 
 function App() {
   
@@ -45,7 +46,9 @@ function App() {
           <Route path="/" element={<JobSearch />} />
           <Route path="contact/*" element={<Contact />} />
         </Routes>
-        <Footer/>
+
+        <SearchFields />
+        <Footer />
       </div>
     </Router>
   );
