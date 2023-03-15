@@ -8,7 +8,7 @@ export default function Footer() {
     <BottomNavigation> 
   
       <p className="pcontainer">
-          Produced by -- Kiana -- Obinna -- Nick -- Ope ©
+          Produced by -- Kiana -- Eric -- Nick -- Ope ©
           <div>
             <BottomNavigationAction label="GitHub" to='https://github.com/KianaMsqt/dream-job' icon={<GitHubIcon />} />
             <BottomNavigationAction label="Timeline" to='https://github.com/KianaMsqt/dream-job/branches' icon={<TimelineIcon />} />
