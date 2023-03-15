@@ -3,8 +3,8 @@ import { MailchimpMarketing } from '@mailchimp/mailchimp_marketing';
 
 // Set up Mailchimp API configuration
 MailchimpMarketing.setConfig({
-  apiKey: '247329b68766ad85aca233a700688aad-us9',
-  server: '247329b68766ad85aca233a700688aad',
+  apiKey: process.env.REACT_APP_MAILCHIMP_API,
+  server: process.env.REACT_APP_MAILCHIMP_SERVER,
 });
 
 const EmailPopup = () => {
