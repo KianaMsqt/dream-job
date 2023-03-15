@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Header from "./components/navlink/Header";
-import JobSearch from "./components/job_search/search/JobSearch";
+import JobSearch from "./components/job_search/JobSearch";
 
 function App() {
   return (
