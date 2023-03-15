@@ -1,37 +1,45 @@
-import * as React from 'react';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import CardMedia from '@mui/material/CardMedia';
 
-
-export default function BasicCard() {
+export default function SearchResultCard( {result} ) {
     return (
       <Card sx={{ minWidth: 500 }}>
+        <CardMedia
+          sx={{ height: 140 }}
+          image={result.employer_logo}
+          title="Employer's Logo"
+          component="img"
+        />
         <CardContent>
+          
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            Word of the Day
+            {result.employer_name}
           </Typography>
+          
           <Typography variant="h5" component="div">
-            Software Developer
+            {result.job_title}
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            Date Posted
+            { Date(result.job_posted_at_timestamp)}
           </Typography>
           <Typography variant="body2">
-            Salary: £30000
+            Salary: ---
             <br />
-            Location: London
+            Location: {result.job_city} , {result.job_state}, {result.job_country}
             <br />
-            Job Type: Permanent
+            Employment Type: {result.job_employment_type}
             <br />
-            Description: job descrption text goes here
+            Description: {result.job_description}
   
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">See More</Button>
+          <Button size="small" href={result.job_apply_link} target="_blank">Apply</Button>
         </CardActions>
       </Card>
     );
