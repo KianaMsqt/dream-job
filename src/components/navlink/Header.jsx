@@ -49,6 +49,17 @@ function Header() {
                 >
                   Subscribe
                 </NavLink>
+                <NavLink
+                  to="/careersupport"
+                  style={({ isActive }) => ({
+                    color: "red",
+                    background: "light-blue",
+                    padding: "10px",
+                  })}
+                  end
+                >
+                  Career
+                </NavLink>
               </li>
             </ul>
           </div>
