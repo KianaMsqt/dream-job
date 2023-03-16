@@ -6,10 +6,11 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Header from "./components/navlink/Header";
 import JobSearch from "./components/job_search/JobSearch";
-import Subscribe from "./components/email_popup/EmailPopup";
+import CareerSupport from "./components/home/supportGrid";
+//import Subscribe from "./components/email_popup/EmailPopup";
 
 function App() {
-   return ( 
+  return (
     <Router>
       <div>
         <Header />
@@ -17,8 +18,9 @@ function App() {
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
           <Route path="/" element={<JobSearch />} />
+          <Route path="careersupport/*" element={<CareerSupport />} />
           <Route path="contact/*" element={<Contact />} />
-          <Route path="subscribe/*" element={<Subscribe />} />
+          {/* <Route path="subscribe/*" element={<Subscribe />} /> */}
         </Routes>
 
         <Footer />
