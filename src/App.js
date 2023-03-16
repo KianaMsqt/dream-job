@@ -6,6 +6,7 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Header from "./components/navlink/Header";
 import JobSearch from "./components/job_search/JobSearch";
+import Subscribe from "./components/email_popup/EmailPopup";
 
 function App() {
    return ( 
@@ -17,6 +18,7 @@ function App() {
           {/* Define a default route that will render the Home component */}
           <Route path="/" element={<JobSearch />} />
           <Route path="contact/*" element={<Contact />} />
+          <Route path="subscribe/*" element={<Subscribe />} />
         </Routes>
 
         <Footer />
