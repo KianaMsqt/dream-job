@@ -3,24 +3,59 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-export default function SearchFields({
-  searchQuery
-}){
+import axios from "axios";
+// import { fakeApiReturnData, makeFakeApiRequest } from '../../utils/fakeApi';
 
+export default function SearchFields(props) {
   const [jobTitle, setJobTitle] = React.useState("");
   const [location, setLocation] = React.useState("");
-  
-  const handleJobTitleChange = event => {
+
+  const handleJobTitleChange = (event) => {
     setJobTitle(event.target.value);
   };
-  
-  const handleLocationChange = event => {
+
+  const handleLocationChange = (event) => {
     setLocation(event.target.value);
   };
-  
+
   const submitSearch = (event) => {
     event.preventDefault();
-    searchQuery(`${jobTitle} in ${location}`);
+
+    const options = {
+      method: "GET",
+      url: "https://jsearch.p.rapidapi.com/search",
+      params: {
+        query: `${jobTitle} in ${location}`,
+        // page: `${page}`,
+        page: `1`,
+        num_pages: "1",
+      },
+      headers: {
+        "X-RapidAPI-Key": process.env.REACT_APP_JSEARCH,
+        "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+      },
+    };
+
+    // makeFakeApiRequest(true, 2000, fakeApiReturnData)
+    // .then(function (response) {
+    //   const results = response.data;
+    //   setSearchResults(results);
+    //   // Call the onSearchResults prop
+    //   props.onSearchResults(results);
+    // }).catch(function (error) {
+    //   console.error(error);
+    // });
+
+    axios
+      .request(options)
+      .then(function (response) {
+        // Pass searchResults to access in JobSearch component
+        // Call the onSearchResults prop
+        props.onSearchResults(response.data.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
 
   return (
@@ -32,24 +67,22 @@ export default function SearchFields({
         }}
         noValidate
         autoComplete="off"
+        onSubmit={submitSearch}
       >
-        <TextField 
-          className="outlined-basic" 
-          label="Job Title" 
-          variant="outlined" 
+        <TextField
+          className="outlined-basic"
+          label="Job Title"
+          variant="outlined"
           onChange={handleJobTitleChange}
         />
-        <TextField 
-          className="outlined-basic" 
-          label="Location" 
-          variant="outlined" 
+        <TextField
+          className="outlined-basic"
+          label="Location"
+          variant="outlined"
           onChange={handleLocationChange}
-          />
-        <Button 
-          variant="contained"
-          onClick={submitSearch}
-          >
-            Search Jobs
+        />
+        <Button variant="contained" type="submit">
+          Search Jobs
         </Button>
       </Box>
     </>
