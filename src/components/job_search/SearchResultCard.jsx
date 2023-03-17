@@ -36,6 +36,11 @@ export default function SearchResultCard({ result }) {
     setExpanded(!expanded);
   };
 
+  // Convert date format to dd/mm/yyyy
+  const dateString = result.job_posted_at_datetime_utc;
+  const date = new Date(dateString);
+  const formattedDate = date.toLocaleDateString('en-GB');
+
   return (
     <div style={{ margin: "1%" }}>
       <Card
@@ -70,7 +75,7 @@ export default function SearchResultCard({ result }) {
             <b>{result.job_title}</b>
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            {Date(result.job_posted_at_timestamp)}
+            Job posted at: {formattedDate}
           </Typography>
           <Typography variant="h6">
             <b>Salary:</b> £30,000
