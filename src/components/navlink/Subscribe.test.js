@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
-import EmailPopup from './EmailPopup';
+import EmailPopup from './Subscribe';
 
 describe('EmailPopup', () => {
   test('submits email and renders success message', async () => {

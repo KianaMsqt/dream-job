@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./Header.css";
+import Subscribe from "./Subscribe";
+import { NavLink } from 'react-router-dom';
+
 
 function Header() {
   return (
@@ -66,6 +68,7 @@ function Header() {
           </div>
         </div>
       </nav>
+      <Subscribe /> 
     </>
   );
 }
