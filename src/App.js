@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/navlink/Header";
 import JobSearch from "./components/job_search/JobSearch";
 import CareerSupport from "./components/home/supportGrid";
+import HomeHero from "./components/home/hero";
 //import Subscribe from "./components/email_popup/EmailPopup";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<JobSearch />} />
           <Route path="careersupport/*" element={<CareerSupport />} />
           <Route path="contact/*" element={<Contact />} />
+          <Route path="homehero/*" element={<HomeHero />} />
           {/* <Route path="subscribe/*" element={<Subscribe />} /> */}
         </Routes>
 
