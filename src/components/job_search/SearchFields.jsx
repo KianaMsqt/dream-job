@@ -101,10 +101,11 @@ export default function SearchFields(props) {
             <TextField
               fullWidth
               sx={{
-                // input: { color: "white" },
                 input: { fontSize: "2rem" },
-                label: { color: "white" },
-                label: { fontSize: "1.5rem" },
+                label: { 
+                  color: "white",
+                  fontSize: "1.5rem"
+                 },
               }}
               className="outlined-basic"
               label="Job Title"
@@ -116,10 +117,11 @@ export default function SearchFields(props) {
             />
             <TextField
               sx={{
-                // input: { color: "white" },
                 input: { fontSize: "2rem" },
-                label: { color: "white" },
-                label: { fontSize: "1.5rem" },
+                label: { 
+                  color: "white",
+                  fontSize: "1.5rem"
+                 },
               }}
               className="outlined-basic"
               label="Location"
