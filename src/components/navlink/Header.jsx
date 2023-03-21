@@ -60,6 +60,17 @@ function Header() {
                 >
                   Career
                 </NavLink>
+                <NavLink
+                  to="/homehero"
+                  style={({ isActive }) => ({
+                    color: "red",
+                    background: "light-blue",
+                    padding: "10px",
+                  })}
+                  end
+                >
+                  Homepage
+                </NavLink>
               </li>
             </ul>
           </div>
