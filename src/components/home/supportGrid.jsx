@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-export default function CareerSupport() {
+export default function SupportGrid() {
   return (
     <>
       <br></br>
@@ -127,5 +127,3 @@ export default function CareerSupport() {
     </>
   );
 }
-
-
