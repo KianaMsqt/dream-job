@@ -37,11 +37,11 @@ export default function CareerSupport() {
           />
           <CardContent align="center">
             <Typography gutterBottom variant="h4" component="div">
-             <b> Upskill with Courses</b>
+              <b> Upskill with Courses</b>
             </Typography>
             <Typography variant="h6" color="text.secondary">
-              Invest in your future with hundreds of courses on offer to help
-              you achieve your career dreams!
+              Invest in your future with courses on offer to help you achieve
+              your career dreams!
             </Typography>
           </CardContent>
           <CardActions>
@@ -109,7 +109,7 @@ export default function CareerSupport() {
             </Typography>
             <Typography variant="h6" color="text.secondary">
               Latest articles on career progression, mental health and securing
-              your perfect job!!
+              your perfect job!
             </Typography>
           </CardContent>
           <CardActions>
@@ -127,3 +127,5 @@ export default function CareerSupport() {
     </>
   );
 }
+
+
