@@ -6,7 +6,6 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 
 import axios from "axios";
-import { fontSize } from "@mui/system";
 // import { fakeApiReturnData, makeFakeApiRequest } from '../../utils/fakeApi';
 
 export default function SearchFields(props) {

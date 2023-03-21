@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
 export default function SupportGrid() {
   return (
