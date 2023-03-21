@@ -1,61 +1,66 @@
+import * as React from 'react';
 import { NavLink } from "react-router-dom";
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import logo from "../../assets/logo.png";
 
-function Header() {
+export default function Header() {
   return (
-    <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" sx={{ position: 'relative', backgroundColor: '#e1f5fe' }}>
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <a className="navbar-brand" href="/">
-            <img src={logo} alt="Logo" style={{ height: "50px" }} />
+            <img src={logo} alt="Logo" style={{ height: "50px", zIndex: 'tooltip' }} />
           </a>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="navlink">
+          </Typography>
+         
                 <NavLink
                   to="/"
-                  style={({ isActive }) => ({
-                    color: "red",
-                    background: "light-blue",
-                    padding: "10px",
-                  })}
-                  end
+                  style={{
+                    color: "#1338BE",
+                    fontWeight: 'bolder',
+                    padding: "15px",
+                    textDecoration: 0,
+                  }}
                 >
                   Job Search
                 </NavLink>
-              </li>
-              <li className="navlink">
+              
                 <NavLink
                   to="/contact"
-                  style={({ isActive }) => ({
-                    color: "red",
-                    background: "light-blue",
-                    padding: "10px",
-                  })}
-                  end
+                  style={{
+                    color: "#1338BE",
+                    fontWeight: 'bolder',
+                    padding: "15px",
+                    textDecoration: 0,
+                  }}
                 >
                   Contact
                 </NavLink>
-              </li>
-              <li className="navlink">
+              
+              
                 <NavLink
                   to="/subscribe"
-                  style={({ isActive }) => ({
-                    color: "red",
-                    background: "light-blue",
-                    padding: "10px",
-                  })}
-                  end
+                  style={{
+                    color: "#1338BE",
+                    fontWeight: 'bolder',
+                    padding: "15px",
+                    textDecoration: 0,
+                  }}
                 >
                   Subscribe
                 </NavLink>
                 <NavLink
                   to="/careersupport"
-                  style={({ isActive }) => ({
-                    color: "red",
-                    background: "light-blue",
-                    padding: "10px",
-                  })}
+                  style={{ 
+                    color: "#1338BE",
+                    fontWeight: 'bold',
+                    padding: "15px",
+                    textDecoration: 0,
+                  }}
                   end
                 >
                   Career
@@ -71,13 +76,10 @@ function Header() {
                 >
                   Homepage
                 </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </>
+                
+         
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
-
-export default Header;

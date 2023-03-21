@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -12,6 +12,7 @@ import { fontSize } from "@mui/system";
 export default function SearchFields(props) {
   const [jobTitle, setJobTitle] = React.useState("");
   const [location, setLocation] = React.useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleJobTitleChange = (event) => {
     setJobTitle(event.target.value);
@@ -23,6 +24,8 @@ export default function SearchFields(props) {
 
   const submitSearch = (event) => {
     event.preventDefault();
+
+    setLoading(true);
 
     const options = {
       method: "GET",
@@ -55,6 +58,8 @@ export default function SearchFields(props) {
         // Pass searchResults to access in JobSearch component
         // Call the onSearchResults prop
         props.onSearchResults(response.data.data);
+
+        setLoading(false);
       })
       .catch(function (error) {
         console.error(error);

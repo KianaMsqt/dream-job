@@ -1,19 +1,23 @@
-import { BottomNavigation } from "@mui/material";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import TimelineIcon from "@mui/icons-material/Timeline";
+import { BottomNavigation, Typography } from "@mui/material";
+import Paper from "@mui/material/Paper";
+
+
 export default function Footer() {
 
   return (
     <BottomNavigation> 
   
-      <p className="pcontainer">
+      <Paper sx={{marginTop: 'calc(15% + 60px)',
+        width: '100%',
+        position: 'fixed',
+        bottom: 0,
+        width: '100%',
+        backgroundColor: '#e1f5fe' 
+        }} component="footer" square variant="outlined">
+        <Typography variant="caption" color="#1338BE" padding={50}>
           Produced by -- Kiana -- Eric -- Nick -- Ope ©
-          <div>
-            <BottomNavigationAction label="GitHub" to='https://github.com/KianaMsqt/dream-job' icon={<GitHubIcon />} />
-            <BottomNavigationAction label="Timeline" to='https://github.com/KianaMsqt/dream-job/branches' icon={<TimelineIcon />} />
-          </div>
-        </p>
+        </Typography>
+      </Paper>
         
     </BottomNavigation>
   );
