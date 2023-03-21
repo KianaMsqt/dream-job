@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
 export default function CareerSupport() {
   return (
@@ -37,7 +36,7 @@ export default function CareerSupport() {
           />
           <CardContent align="center">
             <Typography gutterBottom variant="h4" component="div">
-             <b> Upskill with Courses</b>
+              <b> Upskill with Courses</b>
             </Typography>
             <Typography variant="h6" color="text.secondary">
               Invest in your future with hundreds of courses on offer to help
