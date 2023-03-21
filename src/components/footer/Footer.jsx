@@ -23,13 +23,10 @@ export default function Footer() {
           Produced by  Kiana,  Eric,  Nick,  Ope     © {new Date().getFullYear()}
         </Typography>
         <Box sx={{paddingLeft: 60, }}>
-              <GitHubIcon sx={{color: "blue",'&:hover': {color: 'red',}}} onClick={event =>  window.location.href='https://github.com/KianaMsqt/dream-job'} />
-              <Timeline sx={{marginLeft: 4, color: "blue",'&:hover': {color: 'red',}}} onClick={event =>  window.location.href='https://github.com/KianaMsqt/dream-job/actions'} />
+              <GitHubIcon sx={{color: "#1338BE",'&:hover': {color: 'red',}}} onClick={event =>  window.location.href='https://github.com/KianaMsqt/dream-job'} />
+              <Timeline sx={{marginLeft: 4, color: "#1338BE",'&:hover': {color: 'red',}}} onClick={event =>  window.location.href='https://github.com/KianaMsqt/dream-job/actions'} />
         </Box>
-        
-
       </Paper>
-        
     </BottomNavigation>
   );
 }
