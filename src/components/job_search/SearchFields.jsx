@@ -127,7 +127,7 @@ export default function SearchFields(props) {
               onChange={handleLocationChange}
             />
             <Button variant="contained" type="submit">
-              Search Jobs
+              {loading ? <>Loading..</> : <>Search Jobs</>}
             </Button>
           </Box>
         </Box>
