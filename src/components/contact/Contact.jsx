@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, Button, Box, FormControlLabel, Checkbox, Typography } from '@mui/material';
+import { Button, Box, FormControlLabel, Checkbox } from '@mui/material';
 import './Contact.css';
 
 function Contact() {
