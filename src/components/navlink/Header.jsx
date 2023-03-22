@@ -38,14 +38,6 @@ export default function Header() {
   ];
 
   return (
-    <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        columnGap={10}
-        component="header" 
-      >
     <Box sx={{ flexGrow: 1 }} square variant="outlined">
       <AppBar
         position="static"
@@ -114,6 +106,6 @@ export default function Header() {
         </List>
       </Drawer>
     </Box>
-    </Grid>
+
   );
 }
