@@ -11,7 +11,8 @@ export default function Footer() {
       width: '100%',
       position: 'fixed',
       bottom: 0,
-      backgroundColor: '#e1f5fe' 
+      backgroundColor: '#e1f5fe',
+      justifyContent:"center" 
       }} component="footer" square variant="outlined">
       <Box sx={{textAlign: "center"}}>
         <Typography variant="caption" color="#1338BE">

@@ -11,6 +11,7 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 
+
 export default function Header() {
 
   // Track if menu is open or closed in small screen sizes
@@ -37,7 +38,7 @@ export default function Header() {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} square variant="outlined">
       <AppBar
         position="static"
         sx={{ position: "relative", backgroundColor: "#e1f5fe" }}
@@ -105,5 +106,6 @@ export default function Header() {
         </List>
       </Drawer>
     </Box>
+
   );
 }
