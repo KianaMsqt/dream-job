@@ -13,7 +13,7 @@ export default function Footer() {
       bottom: 0,
       backgroundColor: '#e1f5fe',
       justifyContent:"center" 
-      }} component="footer" square variant="outlined">
+      }} component="footer" variant="outlined">
       <Box sx={{textAlign: "center"}}>
         <Typography variant="caption" color="#1338BE">
           Produced by  Kiana,  Eric,  Nick,  Ope     © {new Date().getFullYear()}

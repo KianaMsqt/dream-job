@@ -1,15 +1,17 @@
 import React from 'react';
 import { Button, Box, FormControlLabel, Checkbox } from '@mui/material';
 import './Contact.css';
+import Container from '@mui/material/Container';
+
 import { Link } from 'react-router-dom';
 
 function Contact() {
   return (
-    <div className="contact-container">
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
-        <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '20px' }}>Contact Us</h1>
-        <div style={{ width: '600px' }}>
-          <p style={{ fontSize: '16px', lineHeight: '26px', marginBottom: '20px' }}>
+    <Container className="contact-container">
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
+        <h1 sx={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '20px' }}>Contact Us</h1>
+        <Box sx={{ width: {md:'600px', sm:"90%"} }}>
+          <p sx={{ fontSize: '16px', lineHeight: '26px', marginBottom: '20px' }}>
             If you have any questions, concerns or comments, please feel free to contact us using the form below. We will be happy to hear from you.
           </p>
           <form>
@@ -41,28 +43,31 @@ function Contact() {
               name="message"
               style={{ width: '100%', padding: '10px', fontSize: '16px', marginBottom: '20px', height: '150px' }}
             ></textarea>
-            <Link to="/thankyou">
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
-            >            
-              Submit
-            </Button>
-            </Link>
+
             <Box mt={1}>
               <FormControlLabel
                 control={<Checkbox defaultChecked />}
                 label="Sign up for our newsletter"
                 sx={{ ml: 0, flexGrow: 1 }}
               />
+            <br />
+            <Link to="/thankyou">
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
+              >            
+                Submit
+              </Button>
+            </Link>
             </Box>
           </form>
-        </div>
-      </div>
+          <br /><br /><br />
+        </Box>
+      </Box>
      
-    </div>
+    </Container>
   );
 }
 
