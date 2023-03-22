@@ -38,7 +38,7 @@ export default function Header() {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1 }} square variant="outlined">
+    <Box sx={{ flexGrow: 1 }} variant="outlined">
       <AppBar
         position="static"
         sx={{ position: "relative", backgroundColor: "#e1f5fe" }}
