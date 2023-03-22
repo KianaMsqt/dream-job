@@ -3,6 +3,7 @@ import { Button, Box, FormControlLabel, Checkbox } from '@mui/material';
 import './Contact.css';
 import Container from '@mui/material/Container';
 
+import { Link } from 'react-router-dom';
 
 function Contact() {
   return (
@@ -50,14 +51,16 @@ function Contact() {
                 sx={{ ml: 0, flexGrow: 1 }}
               />
             <br />
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
-            >
-              Submit
-            </Button>
+            <Link to="/thankyou">
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
+              >            
+                Submit
+              </Button>
+            </Link>
             </Box>
           </form>
           <br /><br /><br />
