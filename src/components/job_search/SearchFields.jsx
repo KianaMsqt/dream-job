@@ -6,7 +6,6 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 
 import axios from "axios";
-import { fontSize } from "@mui/system";
 // import { fakeApiReturnData, makeFakeApiRequest } from '../../utils/fakeApi';
 
 export default function SearchFields(props) {
@@ -102,10 +101,14 @@ export default function SearchFields(props) {
             <TextField
               fullWidth
               sx={{
-                // input: { color: "white" },
-                input: { fontSize: "2rem" },
-                label: { color: "white" },
-                label: { fontSize: "1.5rem" },
+                input: { 
+                  fontSize: "2rem",
+                  zIndex: "10"
+                },
+                label: { 
+                  color: "white",
+                  fontSize: "1.5rem"
+                 },
               }}
               className="outlined-basic"
               label="Job Title"
@@ -117,10 +120,14 @@ export default function SearchFields(props) {
             />
             <TextField
               sx={{
-                // input: { color: "white" },
-                input: { fontSize: "2rem" },
-                label: { color: "white" },
-                label: { fontSize: "1.5rem" },
+                input: { 
+                  fontSize: "2rem",
+                  zIndex: "10"
+                },
+                label: { 
+                  color: "white",
+                  fontSize: "1.5rem"
+                 },
               }}
               className="outlined-basic"
               label="Location"
@@ -129,7 +136,7 @@ export default function SearchFields(props) {
               onChange={handleLocationChange}
             />
 
-            <Button variant="contained" type="submit" size="large">
+            <Button variant="contained" type="submit" size="large" sx={{padding: "1.6rem", cursor: "pointer"}}>
               {loading ? <>Loading...</> : <>Search Jobs</>}
             </Button>
           </Box>

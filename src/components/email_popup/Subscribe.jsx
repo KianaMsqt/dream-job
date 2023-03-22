@@ -7,20 +7,21 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 
-export default function HomeHero() {
+export default function Subscribe() {
   return (
     <Card sx={{ minWidth: 500 }}>
       <Box sx={{ position: "relative" }}>
         <CardMedia
           component="img"
           height="600"
-          image={require("./homehero.jpg")}
+          image={require("./blueMountain.jpg")}
         />
         <Box
           sx={{
             position: "absolute",
-            bottom: 200,
-            left: 200,
+            bottom: 230,
+            left: 100,
+            right: 100,
             width: "80%",
             bgcolor: "rgba(0, 0, 0, 0.54)",
             color: "white",
@@ -29,19 +30,19 @@ export default function HomeHero() {
             textAlign: "center",
           }}
         >
-          <Typography variant="h5">Find your Dream Job!</Typography>
+          <Typography variant="h5">Subscribe!</Typography>
           <Typography variant="body2">Add Job Search in here</Typography>
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              Added text to add if needed
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
         </Box>
       </Box>
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Added text to add if needed
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }

@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
 export default function SupportGrid() {
   return (
@@ -43,7 +42,7 @@ export default function SupportGrid() {
               your career dreams!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -77,7 +76,7 @@ export default function SupportGrid() {
               job winning CV!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -111,7 +110,7 @@ export default function SupportGrid() {
               your perfect job!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -123,6 +122,8 @@ export default function SupportGrid() {
           </CardActions>
         </Card>
       </Grid>
+      <br></br>
+      <br></br>
     </>
   );
 }
