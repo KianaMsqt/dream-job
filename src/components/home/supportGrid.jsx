@@ -6,9 +6,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
-export default function CareerSupport() {
+export default function SupportGrid() {
   return (
     <>
       <br></br>
@@ -44,7 +43,7 @@ export default function CareerSupport() {
               your career dreams!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -78,7 +77,7 @@ export default function CareerSupport() {
               winning CV!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -112,7 +111,7 @@ export default function CareerSupport() {
               your perfect job!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -124,8 +123,8 @@ export default function CareerSupport() {
           </CardActions>
         </Card>
       </Grid>
+      <br></br>
+      <br></br>
     </>
   );
 }
-
-

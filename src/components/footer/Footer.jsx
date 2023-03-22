@@ -1,33 +1,27 @@
-import { BottomNavigation, Typography, useTheme } from "@mui/material";
+import { Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { Timeline } from "@mui/icons-material";
+import { Box } from "@mui/system";
 
 export default function Footer() {
-  const theme = useTheme();
-
   return (
-    <BottomNavigation> 
-      <Paper
-        sx={{
-          backgroundColor: theme.palette.primary.light,
-          color: theme.palette.primary.contrastText,
-          position: 'fixed',
-          bottom: 0,
-          width: '100%',
-          padding: theme.spacing(2),
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-        component="footer"
-        square
-      >
-        <Typography
-          variant="caption"
-          sx={{ fontFamily: 'Roboto' }}
-        >
-          Produced by -- Kiana -- Eric -- Nick -- Ope ©
+    <Paper sx={{
+      marginTop: 'calc(15% + 60px)',
+      width: '100%',
+      position: 'fixed',
+      bottom: 0,
+      backgroundColor: '#e1f5fe' 
+      }} component="footer" square variant="outlined">
+      <Box sx={{textAlign: "center"}}>
+        <Typography variant="caption" color="#1338BE">
+          Produced by  Kiana,  Eric,  Nick,  Ope     © {new Date().getFullYear()}
         </Typography>
-      </Paper>
-    </BottomNavigation>
+      </Box>
+      <Box sx={{textAlign: "center"}}>
+            <GitHubIcon sx={{color: "#1338BE",'&:hover': {color: 'red',}}} onClick={event =>  window.location.href='https://github.com/KianaMsqt/dream-job'} />
+            <Timeline sx={{marginLeft: 4, color: "#1338BE",'&:hover': {color: 'red',}}} onClick={event =>  window.location.href='https://github.com/KianaMsqt/dream-job/actions'} />
+      </Box>
+    </Paper>
   );
 }

@@ -5,24 +5,23 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Header from "./components/navlink/Header";
-import JobSearch from "./components/job_search/JobSearch";
-import CareerSupport from "./components/home/supportGrid";
-import HomeHero from "./components/home/hero";
-//import Subscribe from "./components/email_popup/EmailPopup";
+import Home from "./components/home/Home";
+import SupportGrid from "./components/home/SupportGrid";
+import Subscribe from "./components/email_popup/Subscribe";
 
 function App() {
   return (
     <Router>
       <div>
         <Header />
+
         <Routes>
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
-          <Route path="/" element={<JobSearch />} />
-          <Route path="careersupport/*" element={<CareerSupport />} />
+          <Route path="/" element={<Home />} />
+          <Route path="careersupport/*" element={<SupportGrid />} />
           <Route path="contact/*" element={<Contact />} />
-          <Route path="homehero/*" element={<HomeHero />} />
-          {/* <Route path="subscribe/*" element={<Subscribe />} /> */}
+          <Route path="subscribe/*" element={<Subscribe />} />
         </Routes>
 
         <Footer />
