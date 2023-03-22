@@ -32,17 +32,17 @@ export default function Subscribe() {
         >
           <Typography variant="h5">Subscribe!</Typography>
           <Typography variant="body2">Add Job Search in here</Typography>
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              Added text to add if needed
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
         </Box>
       </Box>
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Added text to add if needed
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
