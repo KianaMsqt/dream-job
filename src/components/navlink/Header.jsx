@@ -5,8 +5,35 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import logo from "../../assets/logo.png";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const menuItems = [
+    {
+      label: "Job Search",
+      to: "/",
+    },
+    {
+      label: "Contact",
+      to: "/contact",
+    },
+    {
+      label: "Career",
+      to: "/careersupport",
+      end: true,
+    },
+  ];
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -24,55 +51,57 @@ export default function Header() {
             </a>
           </Typography>
 
-          <NavLink
-            to="/"
-            style={{
-              color: "#1338BE",
-              fontWeight: "bolder",
-              padding: "15px",
-              textDecoration: 0,
-            }}
+          <IconButton
+            size="large"
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            sx={{ display: { sm: "none" } }}
+            onClick={toggleMenu}
           >
-            Job Search
-          </NavLink>
+            <MenuIcon />
+          </IconButton>
 
-          <NavLink
-            to="/contact"
-            style={{
-              color: "#1338BE",
-              fontWeight: "bolder",
-              padding: "15px",
-              textDecoration: 0,
-            }}
-          >
-            Contact
-          </NavLink>
-
-          {/* <NavLink
-            to="/subscribe"
-            style={{
-              color: "#1338BE",
-              fontWeight: "bolder",
-              padding: "15px",
-              textDecoration: 0,
-            }}
-          >
-            Subscribe
-          </NavLink> */}
-          <NavLink
-            to="/careersupport"
-            style={{
-              color: "#1338BE",
-              fontWeight: "bold",
-              padding: "15px",
-              textDecoration: 0,
-            }}
-            end
-          >
-            Career
-          </NavLink>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            {menuItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                style={{
+                  color: "#1338BE",
+                  fontWeight: "bolder",
+                  padding: "15px",
+                  textDecoration: 0,
+                }}
+                end={item.end}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </Box>
         </Toolbar>
       </AppBar>
+
+      <Drawer
+        anchor="right"
+        open={isMenuOpen}
+        onClose={toggleMenu}
+        sx={{ display: { sm: "none", md: "block" } }}
+      >
+        <List sx={{ width: 250 }}>
+          {menuItems.map((item) => (
+            <ListItem
+              button
+              key={item.to}
+              component={NavLink}
+              to={item.to}
+              onClick={toggleMenu}
+            >
+              {item.label}
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
     </Box>
   );
 }
