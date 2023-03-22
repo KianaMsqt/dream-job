@@ -9,8 +9,7 @@ function Contact() {
         <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '20px' }}>Contact Us</h1>
         <div style={{ width: '600px' }}>
           <p style={{ fontSize: '16px', lineHeight: '26px', marginBottom: '20px' }}>
-            If you have any questions, concerns or comments, please feel free to contact us using the form below. We will get
-            back to you as soon as possible.
+            If you have any questions, concerns or comments, please feel free to contact us using the form below. We will be happy to hear from you.
           </p>
           <form>
             <label htmlFor="name" style={{ display: 'block', marginBottom: '10px', fontSize: '16px' }}>
