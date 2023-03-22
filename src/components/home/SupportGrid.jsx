@@ -43,7 +43,7 @@ export default function SupportGrid() {
               your career dreams!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -77,7 +77,7 @@ export default function SupportGrid() {
               winning CV!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -111,7 +111,7 @@ export default function SupportGrid() {
               your perfect job!
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={{padding: "1rem"}}>
             <Button
               style={{ margin: "0 auto", display: "flex" }}
               variant="contained"
@@ -123,6 +123,8 @@ export default function SupportGrid() {
           </CardActions>
         </Card>
       </Grid>
+      <br></br>
+      <br></br>
     </>
   );
 }

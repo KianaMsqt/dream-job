@@ -7,7 +7,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/navlink/Header";
 import Home from "./components/home/Home";
 import SupportGrid from "./components/home/SupportGrid";
-import Subscribe from "./components/email_popup/subscribe";
+import Subscribe from "./components/email_popup/Subscribe";
 
 function App() {
   return (

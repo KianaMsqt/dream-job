@@ -19,8 +19,9 @@ export default function Subscribe() {
         <Box
           sx={{
             position: "absolute",
-            bottom: 200,
-            left: 200,
+            bottom: 230,
+            left: 100,
+            right: 100,
             width: "80%",
             bgcolor: "rgba(0, 0, 0, 0.54)",
             color: "white",
