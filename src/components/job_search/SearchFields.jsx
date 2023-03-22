@@ -4,6 +4,8 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+
 
 import axios from "axios";
 // import { fakeApiReturnData, makeFakeApiRequest } from '../../utils/fakeApi';
@@ -79,9 +81,11 @@ export default function SearchFields(props) {
           <Box
             sx={{
               position: "absolute",
-              bottom: 230,
-              left: 100,
-              right: 100,
+              left: "50%",
+              top: "50%",
+              maxWidth: "80%",
+              minHeight: "100px",
+              transform: "translate(-50%, -50%)",
 
               color: "white",
 
@@ -98,17 +102,25 @@ export default function SearchFields(props) {
             autoComplete="off"
             onSubmit={submitSearch}
           >
+
+<card>
+              <Typography>
+                <h1 align="center">Search for your Dream Job!</h1>
+              </Typography>
+            </card>
+            <br></br>
+            
             <TextField
               fullWidth
               sx={{
-                input: { 
+                input: {
                   fontSize: "2rem",
-                  zIndex: "10"
+                  zIndex: "10",
                 },
-                label: { 
+                label: {
                   color: "white",
-                  fontSize: "1.5rem"
-                 },
+                  fontSize: "1.5rem",
+                },
               }}
               className="outlined-basic"
               label="Job Title"
@@ -118,16 +130,18 @@ export default function SearchFields(props) {
               border-color="white"
               onChange={handleJobTitleChange}
             />
+
+
             <TextField
               sx={{
-                input: { 
+                input: {
                   fontSize: "2rem",
-                  zIndex: "10"
+                  zIndex: "10",
                 },
-                label: { 
+                label: {
                   color: "white",
-                  fontSize: "1.5rem"
-                 },
+                  fontSize: "1.5rem",
+                },
               }}
               className="outlined-basic"
               label="Location"
@@ -136,7 +150,12 @@ export default function SearchFields(props) {
               onChange={handleLocationChange}
             />
 
-            <Button variant="contained" type="submit" size="large" sx={{padding: "1.6rem", cursor: "pointer"}}>
+            <Button
+              variant="contained"
+              type="submit"
+              size="large"
+              sx={{ padding: "1.6rem", cursor: "pointer" }}
+            >
               {loading ? <>Loading...</> : <>Search Jobs</>}
             </Button>
           </Box>

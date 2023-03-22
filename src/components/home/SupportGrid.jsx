@@ -22,8 +22,7 @@ export default function SupportGrid() {
       >
         <Card
           sx={{
-            maxWidth: 450,
-
+            maxWidth: 400,
             borderRadius: 5,
             boxShadow: 5,
             margin: 5,
@@ -57,7 +56,7 @@ export default function SupportGrid() {
 
         <Card
           sx={{
-            maxWidth: 450,
+            maxWidth: 400,
             borderRadius: 5,
             boxShadow: 5,
             margin: 5,
@@ -73,8 +72,8 @@ export default function SupportGrid() {
               <b>CV Builder</b>
             </Typography>
             <Typography variant="h6" color="text.secondary">
-              Use our free templates to help you craft your your very own job
-              winning CV!
+              Use our free online templates to help you craft your your very own
+              job winning CV!
             </Typography>
           </CardContent>
           <CardActions sx={{padding: "1rem"}}>
@@ -91,10 +90,10 @@ export default function SupportGrid() {
 
         <Card
           sx={{
-            maxWidth: 450,
+            maxWidth: 400,
             borderRadius: 5,
             boxShadow: 5,
-            margin: 0,
+            margin: 5,
           }}
         >
           <CardMedia
@@ -102,7 +101,7 @@ export default function SupportGrid() {
             image={require("./career.jpg")}
             title="career advice"
           />
-          <CardContent align="center" sx={{ padding: 3 }}>
+          <CardContent align="center">
             <Typography gutterBottom variant="h4" component="div">
               <b>Career Advice</b>
             </Typography>
