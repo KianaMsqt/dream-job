@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, Box, FormControlLabel, Checkbox } from '@mui/material';
 import './Contact.css';
+import ThankYou from './ThankYou';
+import { Link } from 'react-router-dom';
 
 function Contact() {
   return (
@@ -41,15 +43,16 @@ function Contact() {
               name="message"
               style={{ width: '100%', padding: '10px', fontSize: '16px', marginBottom: '20px', height: '150px' }}
             ></textarea>
-
+            <Link to="/thankyou">
             <Button
               type="submit"
               variant="contained"
               color="primary"
               style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
-            >
+            >            
               Submit
             </Button>
+            </Link>
             <Box mt={1}>
               <FormControlLabel
                 control={<Checkbox defaultChecked />}

@@ -5,10 +5,19 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import logo from "../../assets/logo.png";
+import Grid from "@mui/material/Grid";
 
 export default function Header() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        columnGap={10}
+        component="header" 
+      >
+    <Box sx={{ flexGrow: 1 }} square variant="outlined">
       <AppBar
         position="static"
         sx={{ position: "relative", backgroundColor: "#e1f5fe" }}
@@ -74,5 +83,6 @@ export default function Header() {
         </Toolbar>
       </AppBar>
     </Box>
+    </Grid>
   );
 }

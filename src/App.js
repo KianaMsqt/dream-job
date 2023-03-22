@@ -8,6 +8,7 @@ import Header from "./components/navlink/Header";
 import Home from "./components/home/Home";
 import SupportGrid from "./components/home/SupportGrid";
 import Subscribe from "./components/email_popup/Subscribe";
+import ThankYou from "./components/contact/ThankYou";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="careersupport/*" element={<SupportGrid />} />
           <Route path="contact/*" element={<Contact />} />
           <Route path="subscribe/*" element={<Subscribe />} />
+          <Route path="thankyou/*" element={<ThankYou />} />
         </Routes>
 
         <Footer />
