@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Box, FormControlLabel, Checkbox } from '@mui/material';
 import './Contact.css';
-import ThankYou from './ThankYou';
 import { Link } from 'react-router-dom';
 
 function Contact() {
