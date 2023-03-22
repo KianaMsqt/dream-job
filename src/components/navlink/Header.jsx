@@ -12,6 +12,8 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 
 export default function Header() {
+
+  // Track if menu is open or closed in small screen sizes
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
@@ -54,7 +56,7 @@ export default function Header() {
           <IconButton
             size="large"
             edge="end"
-            color="inherit"
+            color="#0c5ca7"
             aria-label="menu"
             sx={{ display: { sm: "none" } }}
             onClick={toggleMenu}
