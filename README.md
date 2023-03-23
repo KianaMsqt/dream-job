@@ -34,6 +34,23 @@ This will start the server and open the application in your default browser. Fro
 ## Demo
 You can view a live demo of Dream Job hosted on Netlify at the following link: https://d-r-e-a-m-job.netlify.app/
 
+Also, in the following you can see some screenshots of the application's look:
+
+| ![Overview](./public/Home-Page.png) |
+|:--:|
+| <b>Overview in mobile</b>|
+
+| ![Overview](./public/Search-Results.png) |
+|:--:|
+| <b>Example of Search Result</b>|
+
+| ![Overview](./public/Contact-Form.png) |
+|:--:|
+| <b>Contact form</b>|
+
+| ![Overview](./public/Thank-You-Message.png) |
+|:--:|
+| <b>Thank You Message after Form Submission</b>|
 
 ## Contributing
 If you would like to contribute to Dream Job, feel free to fork the repository and submit a pull request.
