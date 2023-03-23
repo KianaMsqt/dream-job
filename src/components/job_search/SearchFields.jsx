@@ -4,7 +4,6 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
 
 
 import axios from "axios";
@@ -102,17 +101,15 @@ export default function SearchFields(props) {
             autoComplete="off"
             onSubmit={submitSearch}
           >
-
-<card>
-              <Typography>
-                <h1 align="center">Search for your Dream Job!</h1>
-              </Typography>
-            </card>
+          <Box sx={{width: "100% !important"}}>
+            <h1 align="center">Search for your Dream Job!</h1>
+          </Box>
             <br></br>
             
             <TextField
               fullWidth
               sx={{
+                maxWidth: "95%",
                 input: {
                   fontSize: "2rem",
                   zIndex: "10",
@@ -134,6 +131,7 @@ export default function SearchFields(props) {
 
             <TextField
               sx={{
+                maxWidth: "95%",
                 input: {
                   fontSize: "2rem",
                   zIndex: "10",
