@@ -32,7 +32,7 @@ This will start the server and open the application in your default browser. Fro
 
 
 ## Demo
-You can view a live demo of Dream Job hosted on Netlify at the following link: https://dancing-capybara-bb2193.netlify.app
+You can view a live demo of Dream Job hosted on Netlify at the following link: https://d-r-e-a-m-job.netlify.app/
 
 
 ## Contributing
